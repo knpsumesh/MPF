@@ -28,9 +28,11 @@ Assume 192.168.1.1 is R1
 * Create telnet in R2 and access it from R1 . its work 
 * Ping R1to R2 its not work
 
-ERROR:
+# ERROR:
 (suppose we ping from R1 to R2 its fail. Return traffic is blocked in fw becz connection table not store the traffic . normally we enable icmp,we can use another methode)
+
 FW
+```
 Access-list myacl permit icmp any any
 Class-map my class
 Match access-list myacl
@@ -40,14 +42,19 @@ Class myclass
 Inspect icmp
 Police input 8000 conform-action transmit exceed-action drop
 Exit
-	Now I want to apply this in interface not globally
+```
+# Now I want to apply this in interface not globally
 
-Service-policy my policy interface outside
+    Service-policy my policy interface outside
 
 
-“we want to allow the icmp reply from outside to inside”
-	Now ping from R1 to R2 its work 
-Check service-policy #show service-policy
+# we want to allow the icmp reply from outside to inside”
+
+Now ping from R1 to R2 its work :
+
+Check service-policy
+
+    show service-policy
 
 
 
