@@ -34,7 +34,7 @@ $\mathbb{\color{red}{ ERROR }}$
 
 (suppose we ping from R1 to R2 its fail. Return traffic is blocked in fw becz connection table not store the traffic . normally we enable icmp,we can use another methode)
 
-FW
+$\mathbb{\color{red}{ FW }}$
 ```
 Access-list myacl permit icmp any any
 Class-map my class
