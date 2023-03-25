@@ -30,7 +30,7 @@ Assume 192.168.1.1 is R1
 * Create telnet in R2 and access it from R1 . its work 
 * Ping R1to R2 its not work
 
-- ERROR
+@@ ERROR @@
 (suppose we ping from R1 to R2 its fail. Return traffic is blocked in fw becz connection table not store the traffic . normally we enable icmp,we can use another methode)
 
 FW
